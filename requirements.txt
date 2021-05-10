@@ -8,7 +8,7 @@ click==7.1.2
 Flask==1.1.2
 Flask-WTF==0.14.3
 flatbuffers==1.12
-gast==0.3.3
+gast==0.2.2
 google-auth==1.30.0
 google-auth-oauthlib==0.4.4
 google-pasta==0.2.0
@@ -37,11 +37,11 @@ scipy==1.5.4
 six==1.15.0
 sklearn==0.0
 tb-nightly==1.14.0a20190603
-tensorboard==2.5.0
+tensorboard==2.0.2
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
-tensorflow==2.0.0b1
-tensorflow-estimator==2.4.0
+tensorflow==2.0.0
+tensorflow-estimator==2.0.1
 termcolor==1.1.0
 tf-estimator-nightly==1.14.0.dev2019060501
 threadpoolctl==2.1.0
