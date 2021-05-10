@@ -1,0 +1,45 @@
+<h1>FLASK APP RUNNING</h1>
+<h2>Please enter your wine attributes below:</h2>
+<form  method="POST">
+
+    session['f_a'] = form.f_a.data
+    session['v_a'] = form.v_a.data
+    session['c_a'] = form.c_a.data
+    session['r_s'] = form.r_s.data
+    session['chl'] = form.chl.data
+    session['f_s_d'] = form.f_s_d.data
+    session['t_s_d'] = form.t_s_d.data
+    session['den'] = form.den.data
+    session['ph'] = form.ph.data
+    session['sul'] = form.sul.data
+    session['alc'] = form.alc.data
+    session['qua'] = form.qua.data
+
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.f_a.label }} {{form.f_a}}
+    <br>
+    {{ form.v_a.label}} {{form.v_a}}
+    <br>
+    {{form.c_a.label}}{{form.c_a}}
+    <br>
+    {{form.r_s.label}}{{form.r_s}}
+    <br>
+    {{ form.chl.label }} {{form.chl}}
+    <br>
+    {{ form.f_s_d.label}} {{form.f_s_d}}
+    <br>
+    {{form.t_s_d.label}}{{form.t_s_d}}
+    <br>
+    {{form.den.label}}{{form.den}}
+    <br>
+    {{form.ph.label}}{{form.ph}}
+    <br>
+    {{ form.sul.label }} {{form.sul}}
+    <br>
+    {{ form.alc.label}} {{form.alc}}
+    <br>
+    {{form.qua.label}}{{form.qua}}
+    <br>
+    {{ form.submit() }}
+</form>
