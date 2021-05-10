@@ -38,6 +38,7 @@ def return_prediction(model,scaler,sample_json):
     return classes[class_ind][0]
 
 
+
 app = Flask(__name__)
 # Configure a secret SECRET_KEY
 # We will later learn much better ways to do this!!
@@ -53,7 +54,7 @@ wine_scaler = joblib.load("wine_scaler.pkl")
 # Lots of fields available:
 # http://wtforms.readthedocs.io/en/stable/fields.html
 class WineForm(FlaskForm):
-    
+
     f_a = TextField('fixed_acidity')
     v_a = TextField('volatile_acidity')
     c_a = TextField('citric_acid')
@@ -70,14 +71,15 @@ class WineForm(FlaskForm):
     submit = SubmitField('Analyze')
 
 
-@app.route('/wine', methods=['GET', 'POST'])
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
 
     # Create instance of the form.
     form = WineForm()
     # If the form is valid on submission (we'll talk about validation next)
     if form.validate_on_submit():
-        # Grab the data from the breed on the form.
+        # Grab the data from the color on the form.
 
         session['f_a'] = form.f_a.data
         session['v_a'] = form.v_a.data
@@ -106,7 +108,7 @@ def prediction():
     content['fixed_acidity'] = float(session['f_a'])
     content['volatile_acidity'] = float(session['v_a'])
     content['citric_acid'] = float(session['c_a'])
-    content['residual_sugar'] = float(se/ssion['r_s'])
+    content['residual_sugar'] = float(session['r_s'])
     content['chlorides'] = float(session['chl'])
     content['free_sulfur_dioxide'] = float(session['f_s_d'])
     content['total_sulfur_dioxide'] = float(session['t_s_d'])

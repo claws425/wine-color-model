@@ -2,18 +2,6 @@
 <h2>Please enter your wine attributes below:</h2>
 <form  method="POST">
 
-    session['f_a'] = form.f_a.data
-    session['v_a'] = form.v_a.data
-    session['c_a'] = form.c_a.data
-    session['r_s'] = form.r_s.data
-    session['chl'] = form.chl.data
-    session['f_s_d'] = form.f_s_d.data
-    session['t_s_d'] = form.t_s_d.data
-    session['den'] = form.den.data
-    session['ph'] = form.ph.data
-    session['sul'] = form.sul.data
-    session['alc'] = form.alc.data
-    session['qua'] = form.qua.data
 
     {# This hidden_tag is a CSRF security feature. #}
     {{ form.hidden_tag() }}
