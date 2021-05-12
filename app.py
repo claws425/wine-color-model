@@ -55,20 +55,20 @@ wine_scaler = joblib.load("wine_scaler.pkl")
 # http://wtforms.readthedocs.io/en/stable/fields.html
 class WineForm(FlaskForm):
 
-    f_a = TextField('fixed_acidity')
-    v_a = TextField('volatile_acidity')
-    c_a = TextField('citric_acid')
-    r_s = TextField('residual_sugar')
-    chl = TextField('chlorides')
-    f_s_d = TextField('free_sulfur_dioxide')
-    t_s_d = TextField('total_sulfur_dioxide')
-    den = TextField('density')
+    f_a = TextField('Fixed Acidity')
+    v_a = TextField('Volatile Acidity')
+    c_a = TextField('Citric Acid')
+    r_s = TextField('Residual Sugar')
+    chl = TextField('Chlorides')
+    f_s_d = TextField('Free Sulfur Dioxide')
+    t_s_d = TextField('Total Sulfur Dioxide')
+    den = TextField('Density')
     ph = TextField('pH')
-    sul = TextField('sulphates')
-    alc = TextField('alcohol')
-    qua = TextField('quality')
+    sul = TextField('Sulphates')
+    alc = TextField('Alcohol')
+    qua = TextField('Quality')
 
-    submit = SubmitField('Analyze')
+    submit = SubmitField('Analyze and Determine Color')
 
 
 
